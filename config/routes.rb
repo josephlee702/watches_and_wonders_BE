@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get "api/brand-index", action: :index, controller: "api/brands"
+  get "api/watch-index", action: :index, controller: "api/watches"
 end
