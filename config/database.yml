@@ -8,8 +8,8 @@
 default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: localhost
-
+  timeout: 5000
+  
 development:
   <<: *default
   database: watches_and_wonders_development
