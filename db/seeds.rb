@@ -1,9 +1,9 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+Brand.destroy_all
+Watch.destroy_all
+
+Brand.create(name: "Rolex", country: "Switzerland")
+Brand.create(name: "Omega", country: "Switzerland")
+
+Watch.create(reference_number: "116500LN", model: "Daytona", price: 14000, movement: "Automatic", year_of_production: 2021, case_material: "Steel", case_diameter: "40mm", description: "Chronograph watch", bracelet: "Oystersteel", lug_to_lug: "47mm", lume: true, brand_id: 1)
+
+Watch.create(reference_number: "310.30.42.50.01.001", model: "Speedmaster", price: 6100, movement: "Manual", year_of_production: 2020, case_material: "Steel", case_diameter: "42mm", description: "Moonwatch", bracelet: "Steel", lug_to_lug: "48mm", lume: true, brand_id: 2)
