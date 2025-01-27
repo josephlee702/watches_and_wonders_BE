@@ -4,7 +4,7 @@ module Api
       # @brands = Brand.all
       # render json: @brands
       @brands = Brand.all
-      render json: @brands
+      render json: @brands, include: :watches
     end
   end
 end

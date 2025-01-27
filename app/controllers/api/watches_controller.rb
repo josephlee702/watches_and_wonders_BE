@@ -4,7 +4,7 @@ module Api
       # @watches = WatchApiService.get_watch_data
       # render json: @watches
       @watches = Watch.all
-      render json: @watches
+      render json: @watches, include: :brand
     end
   end
 end
