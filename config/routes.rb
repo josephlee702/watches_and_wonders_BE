@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  get "api/brand-index", action: :index, controller: "api/brands"
-  get "api/watch-index", action: :index, controller: "api/watches"
+  get "api/brand-index", to: "api/brands#index"
+  get "api/watch-index", to: "api/watches#index"
 end
